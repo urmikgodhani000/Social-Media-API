@@ -1,0 +1,6 @@
+{
+  "ignore": ["node_modules"],
+  "watch": ["src/**/*{js, json}", ".env"],
+  "etx": "js,json",
+  "exec": "node -r dotenv/config src/server.js"
+}
