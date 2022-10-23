@@ -18,11 +18,13 @@ let auth = require("./routes/auth");
 let user = require("./routes/users");
 let post = require("./routes/posts");
 let comment = require("./routes/comment");
+let index = require("./routes/index");
 //define root routes.
 
+app.use("/api", index);
 app.use("/api/authenticate", auth);
 app.use("/api/user", user);
-app.use("/api/post", post);
+app.use("/api/posts", post);
 app.use("/api/comment", comment);
 
 app.use((err, req, res, next) => {
